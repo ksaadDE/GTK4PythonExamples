@@ -1,6 +1,8 @@
  # Dialog Boxes
  The thing is self-explanatory aslong you don't try to use ResponseTypes. If you want to use ResponseTypes you have two options.
  
+ ![Animation Msg Box](anim_msg_box.gif)
+ 
  ## Option No 1
  ```python3
 dialog.add_buttons("OK", Gtk.ResponseType.OK, "Cancel", Gtk.ResponseType.CANCEL)
