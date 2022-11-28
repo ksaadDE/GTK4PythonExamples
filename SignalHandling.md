@@ -1,6 +1,6 @@
 # Signal Handling in GTK-4 Python3
-## Using default Signals
-You can just connect to the EventListener of a Widget, Window etc.
+## Default way, pre-given Signals
+You can just connect to the EventListener of a Widget, Window etc. It is pretty straight forward, although there is no list that helps you to find the Signals, you need to search in the GTK 4 Documentation for everything.
 ```python3
 
 # init func of your Widget/Window
