@@ -11,9 +11,12 @@ def __init__(...):
 def eventListener (params...):
   print("this event triggered yo")
 ```
-## How to create custom signals?
+## How to create and use custom signals?
 The fun starts when you try to hook custom signal e.g. after destroying the Window and showing it again. After ton of research, I was able to find the required GTK 4 steps. 
+
 First of all import the GObject Class from the gi Repository, and use it to setup a custom SignalObject and hook to our object, which is usually some object that is using the class Widget or Window.
+
+### Create custom Signals
 
 ```python3
 import gi
@@ -33,4 +36,11 @@ def onCustomSignal (self, ...):
 ```
 Keep in mind that you have to change the param array after RUN_FIRST, if you want to give in to the eventListener multiple parameters etc. But that works fine.
 
-Hint: Don't forget to use `self.` if you are operating in a custom class.  
+### Trigger Custom Signals
+After initializing our nice custom Signal, we need to use emit to trigger it. 
+```python3
+emit("custom-signal")
+```
+And you finally burned the world, good job :-)
+
+Hint: Don't forget to use `self.` if you are operating in a object (e.g. using a custom class). 
