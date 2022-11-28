@@ -8,4 +8,4 @@ You can find here some examples for Python3 + GTK 4. These are things where I ha
 - [Icons.md](Icons.md) - add App Icon (taskbar) and issues helper
 
 ## Interesting Stuff by the GTK Team
-- [Their Migration "Guide"]: https://gnome.pages.gitlab.gnome.org/gtk/gtk4/migrating-3to4.html]
+- [Their Migration "Guide"](https://gnome.pages.gitlab.gnome.org/gtk/gtk4/migrating-3to4.html)
