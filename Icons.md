@@ -1,5 +1,5 @@
 # App Icon
-If you want to add a App Icon it can get annyoing. GTK uses Themes, which are using Icons which are stored in `/usr/share/icons` e.g. `/usr/share/icons/<Theme>/apps/32/icon.png`
+If you want to add a App Icon it can get annoying. GTK uses Themes, which are using Icons which are stored in `/usr/share/icons` e.g. `/usr/share/icons/<Theme>/apps/32/icon.png`
 ```python3
    from gi.repository.Gtk import IconTheme
    display = self.get_display()
