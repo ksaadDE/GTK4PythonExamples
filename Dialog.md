@@ -49,7 +49,7 @@ gi.require_version('Adw', '1')
 from gi.repository import Gtk, Adw
 
 class MessageBox (Gtk.Dialog):
-    def __init__ (self, *args, **kwargs):
+    def __init__ (self, text="Hi", *args, **kwargs):
         super ().__init__(*args, **kwargs)
         self.area = self.get_content_area()
         message= Gtk.Label()
@@ -80,6 +80,9 @@ class EntryWindow(Gtk.ApplicationWindow):
             self.timeout_id = None
             
             display = self.get_display()
+            
+            dialog = MessageBox("Hi dude! Please click ok")
+            dialog.connect("response", on_dialog_response)
          
         # for both options in Window class
         def on_dialog_response(self, widget, response_id):
