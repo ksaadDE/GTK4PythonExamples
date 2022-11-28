@@ -43,7 +43,7 @@ Then you can use it if you have abstracted GTK.Dialog in e.g. MessageBox with a 
 ## Full Example
 Sounds complicated huh? Here the full example:
 ```python3
-import gi
+import gi,sys
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 from gi.repository import Gtk, Adw
@@ -59,7 +59,7 @@ class MessageBox (Gtk.Dialog):
         #btn = Gtk.Button(label="OK")
         #btn.connect("clicked", self.dialogok_clicked)
         #self.area.append(btn)
-        
+
         # option 1
         self.add_button ("OK", Gtk.ResponseType.OK)
         #self.add_buttons("OK", Gtk.ResponseType.OK, "Cancel", Gtk.ResponseType.CANCEL)
@@ -69,35 +69,38 @@ class MessageBox (Gtk.Dialog):
     # def dialogok_clicked (self, btn):
     #    # ok if label "ok"; .cancel if not
     #    return self.response(Gtk.ResponseType.CANCEL) if not btn.get_label().lower() == "ok" else self.response(Gtk.ResponseType.OK)
-        
+
 class EntryWindow(Gtk.ApplicationWindow):
         def __init__(self, *args, **kwargs):
             super().__init__(*args, **kwargs)
+            self.close()
 
-            self.ndata = None
+            self.set_size_request (100,100)
 
-            self.set_size_request (200,100)
-            self.timeout_id = None
-            
-            display = self.get_display()
-            
-            dialog = MessageBox("Hi dude! Please click ok")
-            dialog.connect("response", on_dialog_response)
-         
+            l=Gtk.Label()
+            l.set_text("This App is a Test App for Messagebox Testing")
+            self.set_child(l)
+
+        # show dialog after load
+        def showDialog(self,):
+            dialog = MessageBox("This is a Test MessageBox")
+            dialog.connect("response", self.on_dialog_response)
+
         # for both options in Window class
-        def on_dialog_response(self, widget, response_id):
-            # if response is OK
-            if response_id == Gtk.ResponseType.OK:
-                print("Ok")
-                widget.destroy() # destroy window after doing what you want to do (handling event)
-            # if response is CANCEL
-            elif response_id == Gtk.ResponseType.CANCEL:
-                print("cancel")
-                widget.destroy() # destroy window after doing what you want to do (handling event)
-            # if the messagedialog is destroyed (by pressing ESC)
-            elif response_id == Gtk.ResponseType.DELETE_EVENT:
-                print("dialog closed or cancelled")
-                widget.destroy() # destroy window after doing what you want to do (handling event)
+        def on_dialog_response (self, widget, response_id):
+            match response_id:
+                # if OK
+                case Gtk.ResponseType.OK:
+                    print("Ok")
+                    widget.destroy() # destroy Messagebox after doing what you want to do (handling event)
+                # if cancel
+                case Gtk.ResponseType.CANCEL:
+                    print("cancel")
+                    widget.destroy() # destroy Messagebox after doing what you want to do (handling event)
+                # if destroyed e.g. by ESC or X Button
+                case Gtk.ResponseType.DELETE_EVENT:
+                    print("dialog closed or cancelled")
+                    widget.destroy() # destroy Messagebox after doing what you want to do (handling event)
 
 
 class MyApp(Adw.Application):
@@ -108,6 +111,8 @@ class MyApp(Adw.Application):
     def on_activate(self, app):
         self.win = EntryWindow (application=app)
         self.win.present()
+        self.win.showDialog()
+
 
 
 app = MyApp(application_id="de.b00bs.test")
