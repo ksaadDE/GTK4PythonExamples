@@ -24,7 +24,7 @@ from gi.repository import GObject
 # init Func of your Widget/Window
 def __init__(...):
   GObject.signal_new('custom-signal', self, GObject.SignalFlags.RUN_FIRST, self,())
-  self.connect("custom-signal", self.onCustomSignal)
+  self.connect("custom-signal", onCustomSignal)
 
 # the eventListener Func
 def onCustomSignal (self, ...):
@@ -32,3 +32,5 @@ def onCustomSignal (self, ...):
 
 ```
 Keep in mind that you have to change the param array after RUN_FIRST, if you want to give in to the eventListener multiple parameters etc. But that works fine.
+
+Hint: Don't forget to use `self.` if you are operating in a custom class.  
