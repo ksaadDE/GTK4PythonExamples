@@ -6,3 +6,6 @@ You can find here some examples for Python3 + GTK 4. These are things where I ha
 ## List of GTK 4, Python Examples
 - [Dialog.md](Dialog.md) - Response Listeners for MessageBoxes using ResponseType & Dialogs
 - [Icons.md](Icons.md) - add App Icon (taskbar) and issues helper
+
+## Interesting Stuff by the GTK Team
+- [Their Migration "Guide"] https://gnome.pages.gitlab.gnome.org/gtk/gtk4/migrating-3to4.html]
