@@ -1,5 +1,5 @@
  # Dialog Boxes
- The thing is self-explanatory aslong you don't try to use ResponseTypes. If you want to use ResponseTypes you have two options.
+ The thing is self-explanatory aslong you don't try to use ResponseTypes to catch a ResponseCode or input after closing the InputBox. If you want to use ResponseTypes you have two options.
  
  ![Animation Msg Box](anim_msg_box.gif)
  
@@ -22,24 +22,25 @@ area.append (btn) # add btn to area, therefore to dialog
 Then in your dialog_clicked Listener you will trigger the .response event using the ResponseCode (e.g. .Cancel)
  ```python3
     def dialogok_clicked (self, btn):
-        if len (self.objects) > 2:
-            self.data = self.objects[2]
-        #self.response = Gtk.ResponseType.OK
         return self.response(Gtk.ResponseType.CANCEL) # or .OK whatever
 ```
 Then you can use it if you have abstracted GTK.Dialog in e.g. MessageBox with a return value. Because you have linked the response event of the object created using MessageBox (GTK.Dialog) class using connect
 ```python3
   #dialog.connect("response", on_dialog_response)
   def on_dialog_response(self, widget, response_id):
-    print(widget.getData())
-    if response_id == Gtk.ResponseType.OK:
-     print("Ok")
-    elif response_id == Gtk.ResponseType.CANCEL:
-     print("cancel")
-    # if the messagedialog is destroyed (by pressing ESC)
-    elif response_id == Gtk.ResponseType.DELETE_EVENT:
-     print("dialog closed or cancelled")
-     widget.destroy()
+    match response_id:
+     # if OK
+     case Gtk.ResponseType.OK:
+         print("Ok")
+         widget.destroy() # destroy Messagebox after doing what you want to do (handling event)
+     # if cancel
+     case Gtk.ResponseType.CANCEL:
+         print("cancel")
+         widget.destroy() # destroy Messagebox after doing what you want to do (handling event)
+     # if destroyed e.g. by ESC or X Button
+     case Gtk.ResponseType.DELETE_EVENT:
+         print("dialog closed or cancelled")
+         widget.destroy() # destroy Messagebox after doing what you want to do (handling event)
 ``` 
  
 ## Full Example
