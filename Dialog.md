@@ -1,5 +1,5 @@
  # Dialog Boxes
- The thing is self-explanatory aslong you don't try to use ResponseTypes to catch a ResponseCode or input after closing the InputBox. If you want to use ResponseTypes you have two options.
+ The thing is self-explanatory aslong you don't try to use ResponseTypes. For example, to catch input after closing the MessageBox. If you want to use ResponseTypes you have overall two options.
  
  ![Animation Msg Box](anim_msg_box.gif)
  
@@ -7,8 +7,7 @@
  ```python3
 dialog.add_buttons("OK", Gtk.ResponseType.OK, "Cancel", Gtk.ResponseType.CANCEL)
  ```
- This adds two buttons (that works with `dialog.add_button` as well). The first parameter is a string that gives the Button a label. The second gives the Response code internally converted to integer.
- The code should be in your init for GTK.Dialog or a subclass.
+This adds two buttons to the MessageBox (it works with `dialog.add_button` as well). The first parameter is a string that adds a label to the Button. The second parameter adds the Response code as integer. The code should be in your init for GTK.Dialog or a subclass.
  
  ## Option No 2
  You define a custom button in Dialog init, and finally add it with the following loc:
