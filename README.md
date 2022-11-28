@@ -6,7 +6,8 @@ You can find here some examples for Python3 + GTK 4. These are things where I ha
 ## List of my GTK 4, Python Examples
 - [Dialog.md Response Listeners for MessageBoxes using ResponseType & Dialogs](Dialog.md)
 - [Icons.md add App Icon (taskbar) and issues helper](Icons.md)
-- [WindowCloseEvent.md - How to handle windows close-request and prevent the Event from destroying the Window?](WindowCloseEvent.md) 
+- [WindowCloseEvent.md - How to handle windows close-request and prevent the Event from destroying the Window?](WindowCloseEvent.md)
+- [Let the world burn, custom and default Signals](SignalHandling.md)
 
 ## Interesting Stuff by the GTK Team
 - [Their Migration "Guide"](https://gnome.pages.gitlab.gnome.org/gtk/gtk4/migrating-3to4.html)
