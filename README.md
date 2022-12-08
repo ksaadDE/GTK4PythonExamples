@@ -8,8 +8,8 @@ Sadly, the documentation is rare and there are only a few examples for Python ou
 I hope my repository helps you to drastically reduce time for searching and reading docs. <3
 
 ## List of my GTK 4, Python Examples
-- [Response Listeners for MessageBoxes using ResponseType & Gtk.Dialog](Dialog.md)
-- [Add Icons (Taskbar), find Icons, use IconThemes and hints for Debugging ](Icons.md)
+- [How to use MessageBoxes and listen to inputs given? (ResponseTypes + GTK.Dialog) ](Dialog.md)
+- [My App should have a AppIcon! How to add that?](Icons.md)
 - [How to handle windows close-request and prevent the Event from destroying the Window?](WindowCloseEvent.md)
 - [Let the world burn, custom and default Signals](SignalHandling.md)
 - [That damn Window spawns randomly, how to fix screen coordinates?](WindowPositioning.md) 
