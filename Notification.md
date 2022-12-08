@@ -1,5 +1,5 @@
-# GTK4 Notifications
-You are probably asking yourself how to use Icons in GTK 4, right?
+# GTK 4 Notifications
+You are probably asking yourself how to use Notifications in GTK 4, right?
 
 ## Easy Notification
 you can easily setup a simple notification if you are just defining the Notification from Gio, setting the title and sending it
