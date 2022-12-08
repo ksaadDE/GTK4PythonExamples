@@ -14,6 +14,7 @@ I hope my repository helps you to drastically reduce time for searching and read
 - [(Custom) Signals and Notifications in GTK 4 - Let the world burn!](SignalHandling.md)
 - [That damn Window spawns randomly, how to fix screen coordinates?](WindowPositioning.md) 
 - [How to use the fucking GTK4.DropDowns?](DropDown.md)
+- [How to use Notifications and Notif. Icons in GTK 4?](Notification.md)
 
 ## Interesting Stuff by the GTK Team
 - [Their Migration "Guide"](https://gnome.pages.gitlab.gnome.org/gtk/gtk4/migrating-3to4.html)
