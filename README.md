@@ -16,3 +16,4 @@ I hope my repository helps you to drastically reduce time for searching and read
 
 ## Interesting Stuff by the GTK Team
 - [Their Migration "Guide"](https://gnome.pages.gitlab.gnome.org/gtk/gtk4/migrating-3to4.html)
+- [Stuff about ComboBox -> Dropdown](https://discourse.gnome.org/t/migrate-from-comboboxtext-to-comborow-dropdown/10565/2)
