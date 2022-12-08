@@ -1,4 +1,4 @@
-# My GTK4 & Python Examples
+# My GTK4 Python Examples
 
 ## Description
 You can find here some examples for Python3 + GTK 4. I had to do quite a bit research to find the elements from the list below. Mostly, it was a deep-dive into the docs, their Gitlab and StackOverflow.
