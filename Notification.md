@@ -1,5 +1,5 @@
 # GTK 4 Notifications
-You are probably asking yourself how to use Notifications in GTK 4, right?
+You are probably asking yourself how to use [Notifications in GTK 4](https://developer.gnome.org/documentation/tutorials/notifications.html), right?
 
 ## Easy Notification
 you can easily setup a simple notification if you are just defining the Notification from Gio, setting the title and sending it
