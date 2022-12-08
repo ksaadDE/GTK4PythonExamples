@@ -1,6 +1,6 @@
 # GTK4.DropDown
 You are asking yourself how to use the [GTK4.DropDown](https://docs.gtk.org/gtk4/class.DropDown.html)? The [Forums](https://discourse.gnome.org/t/migrate-from-comboboxtext-to-comborow-dropdown/10565/2) giving a resonable answer to this.
-What changed from GTK3 is that the system uses a model and some other stuff, to make it more performant and structured.
+What changed from GTK3 is that the system uses a Model, Factory and some other stuff, to make it more structured and to increase the performance.
 
 ## The Model
 First of all you need to add a Model Class as GObject 
