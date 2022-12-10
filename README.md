@@ -13,7 +13,8 @@ I hope my repository helps you to drastically reduce time for searching and read
 - [How to handle windows close-request and prevent the Event from destroying the Window?](WindowCloseEvent.md)
 - [(Custom) Signals and Notifications in GTK 4 - Let the world burn!](SignalHandling.md)
 - [That damn Window spawns randomly, how to fix screen coordinates?](WindowPositioning.md) 
-- [How to use the fucking GTK4.DropDowns?](DropDown.md)
+- [How to use the fucking GTK4.DropDowns? Part 1](DropDown.md)
+- [Less Code, better DropDowns? Click here! Part 2](DropDownSimplified.md)
 - [How to use Notifications and Notif. Icons in GTK 4?](Notification.md)
 
 ## Interesting Stuff by the GTK Team
