@@ -21,4 +21,7 @@ I hope my repository helps you to drastically reduce time for searching and read
 - [Their Migration "Guide"](https://gnome.pages.gitlab.gnome.org/gtk/gtk4/migrating-3to4.html)
 - [Stuff about ComboBox -> Dropdown](https://discourse.gnome.org/t/migrate-from-comboboxtext-to-comborow-dropdown/10565/2)
 - [GTK 4 Widget Gallary - some items may be deprecreated](https://docs.gtk.org/gtk4/visual_index.html) 
-- [GTK4 Documentation - using Notif](https://developer.gnome.org/documentation/tutorials/notifications.html)
+- [GTK 4 Documentation - using Notif](https://developer.gnome.org/documentation/tutorials/notifications.html)
+
+## Other Interesting Stuff
+- [GTK 4 Widgets by Timlau](https://github.com/timlau/gtk4-python)
